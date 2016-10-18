@@ -11,6 +11,5 @@
         "**/*.js.map": true,
         "**/src/**/*.d.ts": true
 	},
-    "editor.wrappingColumn": 0,
-     "typescript.tsdk": "utils/cmf.dev.tasks/node_modules/typescript/lib" 
+    "editor.wrappingColumn": 0 
 }
