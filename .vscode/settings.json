@@ -9,7 +9,7 @@
         "**/*.css": { "when": "$(basename).less"},
         "**/*.min.css": true,
         "**/*.js.map": true,
-        "**/src/**/*.d.ts": true
+        "**/*.d.ts": { "when": "$(basename).ts"}
 	},
-    "editor.wrappingColumn": 0 
+    "editor.wordWrap": "on"
 }

@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/src/main.js",
+            "program": "${workspaceRoot}/src/index.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
@@ -22,24 +22,16 @@
             "outFiles": []
         },
         {
-            "name": "Launch Harmony",
+            "name": "Debug tests",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/src/main.js",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "stopOnEntry": false,
-            "args": [],
+            "args": ["test/**/*.test.js", "--no-timeouts"],
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": null,
             "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy", "--harmony"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "console": "internalConsole",
-            "sourceMaps": true,
-            "outFiles": []
+            "sourceMaps": true
         },
         {
             "name": "Attach",
@@ -48,7 +40,7 @@
             "port": 5858,
             "address": "localhost",
             "restart": false,
-            "sourceMaps": false,
+            "sourceMaps": true,
             "outFiles": [],
             "localRoot": "${workspaceRoot}",
             "remoteRoot": null
@@ -58,8 +50,9 @@
             "type": "node",
             "request": "attach",
             "processId": "${command.PickProcess}",
+            "cwd": "${workspaceRoot}",
             "port": 5858,
-            "sourceMaps": false,
+            "sourceMaps": true,
             "outFiles": []
         }
     ]
