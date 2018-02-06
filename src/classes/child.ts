@@ -9,6 +9,8 @@ export class ChildClass extends ParentClass{
 
     constructor(){
         super();
+
+        this.type = ChildType.Regular; 
     }
 }
 
